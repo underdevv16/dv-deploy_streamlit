@@ -81,7 +81,7 @@ with st.expander('Data Preparation:'):
 
 # Model Training and Inference:
 ## Train the Model
-rf = RandomForsetClassifier()
+rf = RandomForestClassifier()
 rf.fit(X, y)
 
 ## Apply model to make predictions
