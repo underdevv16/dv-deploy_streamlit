@@ -85,6 +85,6 @@ rf = RandomForestClassifier()
 rf.fit(X, y)
 
 ## Apply model to make predictions
-pred = rf.prdict(input_row)
+pred = rf.predict(input_row)
 pred_prob = rf.predict_proba(input_row)
 pred_prob
