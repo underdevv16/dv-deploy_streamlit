@@ -102,21 +102,21 @@ st.dataframe(df_pred_prob,
              column_config={
                'Adelie': st.column_config.ProgressColumn(
                  'Adelie',
-                 formant='%f',
+                 format='%f',
                  width='medium',
                  min_value=0,
                  max_value=1
                ),
                'Chinstrap': st.column_config.ProgressColumn(
                  'Chinstrap',
-                 formant='%f',
+                 format='%f',
                  width='medium',
                  min_value=0,
                  max_value=1
                ),
                'Gentoo': st.column_config.ProgressColumn(
                  'Gentoo',
-                 formant='%f',
+                 format='%f',
                  width='medium',
                  min_value=0,
                  max_value=1
