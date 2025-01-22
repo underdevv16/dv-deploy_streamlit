@@ -126,3 +126,22 @@ st.dataframe(df_pred_prob,
              
 penguin_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
 st.success(str(penguin_species[pred[0]]))
+
+image_urls = {
+  'Adelie': 'https://raw.githubusercontent.com/underdevv16/dv-deploy_streamlit/master/img/adelie.png',
+  'Chinstrap': 'https://raw.githubusercontent.com/underdevv16/dv-deploy_streamlit/master/img/chinstrap.jpg',
+  'Gentoo': 'https://raw.githubusercontent.com/underdevv16/dv-deploy_streamlit/master/img/gentoo.jpg'
+}
+
+predicted_species = penguin_species[pred[0]]
+image_url = image_urls.get(predicted_species)
+if image_url:
+    # Center the image using custom CSS
+    st.markdown(
+        f"""
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="{image_url}" alt="{predicted_species} Penguin" style="max-width: 100%; height: auto;">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
