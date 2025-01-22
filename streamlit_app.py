@@ -87,4 +87,6 @@ rf.fit(X, y)
 ## Apply model to make predictions
 pred = rf.predict(input_row)
 pred_prob = rf.predict_proba(input_row)
-pred_prob
+df_pred_prob = pd.DataFrame(pred_prob)
+df_pred_prob.column = ['Adelie', 'Chinstrap', 'Gentoo']
+df_pred_prob
