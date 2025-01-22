@@ -4,24 +4,24 @@ import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
 # Dark mode CSS
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #0E1117;
-        color: #FFFFFF;
-    }
-    .stApp {
-        background-color: #0E1117;
-        color: #FFFFFF;
-    }
-    .css-18e3th9 {  /* Sidebar */
-        background-color: #262730;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     """
+#     <style>
+#     body {
+#         background-color: #0E1117;
+#         color: #FFFFFF;
+#     }
+#     .stApp {
+#         background-color: #0E1117;
+#         color: #FFFFFF;
+#     }
+#     .css-18e3th9 {  /* Sidebar */
+#         background-color: #262730;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 st.title('🐧 Penguin Species Classifier')
 
