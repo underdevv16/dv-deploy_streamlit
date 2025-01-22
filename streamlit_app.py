@@ -3,10 +3,10 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
-st.title('🤖 Machine Learning App')
+st.title('🐧 Penguin Species Classifier')
 
 # st.write('Hello world!')
-st.info('This app builds a machine learning model!')
+st.info('This app classifies penguins into different species based on several parameters!')
 
 with st.expander("Data:"):
   st.write('**Raw Data:**')
@@ -98,6 +98,31 @@ df_pred_prob.columns=['Adelie', 'Chinstrap', 'Gentoo']
 # Display predicted species:
 
 st.subheader('Predicted Species')
-df_pred_prob
+st.dataframe(df_pred_prob,
+             column_config={
+               'Adelie': st.column_config.ProgressColumn(
+                 'Adelie',
+                 formant='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+               'Chinstrap': st.column_config.ProgressColumn(
+                 'Chinstrap',
+                 formant='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+               'Gentoo': st.column_config.ProgressColumn(
+                 'Gentoo',
+                 formant='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+               ),
+             }, hide_index=True)
+
+             
 penguin_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
 st.success(str(penguin_species[pred[0]]))
